@@ -17,6 +17,7 @@ class Edit extends Component {
             if(e.timeStamp === +this.props.editId) {
                 this.setState({description: e.description, amount: e.amount})
             }
+            return true
         })
     }
 

@@ -19,6 +19,7 @@ class List extends Component {
             if(e.timeStamp === +id) {
                 this.setState({editId: e.timeStamp});
             }
+            return true
         })
 
      }

@@ -29,10 +29,11 @@ const storeIncomeDetail = (state, action) => {
 const updateExpanse = (state, action) => {
     let expanses = [];
     
-    let expanse = Object.entries(state.status).map(el => el[1]).filter(e => {
+    Object.entries(state.status).map(el => el[1]).filter(e => {
         if(e.expanse === true) {
-             return expanses.push(Number(e.amount))
-        }            
+            expanses.push(Number(e.amount))
+        }
+        return true
     })
 
     return {
@@ -54,10 +55,11 @@ const saveExpanse = (state, action) => {
 const updateIncome = (state, action) => {
     let incomes = [];
     
-    let income = Object.entries(state.status).map(el => el[1]).filter(e => {
+    Object.entries(state.status).map(el => el[1]).filter(e => {
         if(e.income === true) {
-             return incomes.push(Number(e.amount))
-            }            
+             incomes.push(Number(e.amount))
+            }
+            return true      
     })
     
     

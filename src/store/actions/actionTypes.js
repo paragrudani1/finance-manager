@@ -1,0 +1,13 @@
+export const ADD_HANDLER = 'ADD_HANDLER';
+export const CANCEL_HANDLER = 'CANCEL_HANDLER';
+
+export const STORE_EXPANSE_DETAIL = 'STORE_EXPANSE_DETAIL';
+export const STORE_INCOME_DETAIL = 'STORE_INCOME_DETAIL';
+export const UPDATE_EXPANSE = 'UPDATE_EXPANSE';
+export const UPDATE_INCOME = 'UPDATE_INCOME';
+export const UPDATE_EDIT = 'UPDATE_EDIT';
+export const DELETE_DATA = 'DELETE_DATA';
+
+export const SAVE_ITEMS = 'SAVE_ITEMS';
+export const SAVE_EXPANSE = 'SAVE_EXPANSE';
+export const SAVE_INCOME = 'SAVE_INCOME'

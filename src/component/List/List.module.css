@@ -1,0 +1,64 @@
+.List {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 60px;
+    justify-content: space-between;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #C9CACC;
+    position: relative;
+}
+
+.List::before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 30px;
+    width: 100%;
+    height: 2px;
+    background-color: #C9CACC;
+}
+
+.List > div {
+    width: 35%;
+}
+
+.List_Amount {
+    padding-left: 70px;
+    overflow: hidden;
+}
+
+ .List_Amount h1{
+    text-align: left;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.List_Date {
+    padding-right: 30px;
+}
+
+.List_Date h1 {
+    text-align: right;
+    font-size: 22px;
+}
+
+.List_Description p {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.Edit {
+    background-color: #C9CACC;
+    width: 100px !important;
+    height: 50px;
+    padding: 10px;
+    border-radius: 3px;
+    margin-left: 100px;
+}

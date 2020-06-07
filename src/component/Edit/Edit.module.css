@@ -1,0 +1,118 @@
+
+
+.Input_Box {
+    transition: .5s ease-in-out;
+    position: absolute;
+    opacity: 1;
+    top: 10%;
+    left: 50%;
+    z-index: 100;
+    background: #424657;
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.42);
+    border-radius: 4px;
+    transform: translate(-50%, 50%);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    padding:60px;
+    overflow: hidden;
+    width:40%;
+}
+
+input {
+    background: #333646;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 0 0 0 20px;
+    color: white;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+}
+
+.Input_Title {
+    font-weight: bold;
+    font-size: 22px;
+    max-width:35%;
+    margin-bottom: 60px;
+}
+
+.Input_Title h1 {
+    position: relative;
+}
+
+.Input_Title h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: white;
+}
+
+.Description {
+    width: 85%;
+}
+
+.Description input {
+    width: 100%;
+    height: 45px;
+}
+
+.General {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.FormBtn {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+
+
+.Amount {
+    width: 70%;
+}
+
+.Amount input {
+    width: 100%;
+    height: 40px;
+}
+
+.FormBtn {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.FormBtn button {
+    width: 45%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-family: 'Nunito';
+    font-weight: bold;
+    color: white;
+}
+
+.Delete {
+    background-color: red;
+}
+
+.Update {
+    background-color: green;
+}
+
+.Model_Closed {
+    transform: translateY(-200%);
+    opacity: 0;
+}
+
+.Disabled {
+    background-color: aliceblue;
+    color: black !important;
+} 

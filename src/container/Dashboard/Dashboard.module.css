@@ -1,0 +1,101 @@
+.Dashboard {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding: 0 90px 0 80px ;
+    background: #424657;
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.29);
+    border-radius: 10px;
+    margin: 80px auto;
+    height: 120px;
+    color: white;
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.Income_Expanse_Container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.Section_Status {
+    display: flex;
+    justify-content: center;
+}
+
+
+.Section_Status h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+/* identical to box height */
+
+text-align: center;
+text-transform: capitalize;
+}
+
+p.Red_Amount {
+    background-color: red;
+}
+
+p.Green_Amount {
+    background-color: green;
+}
+
+.Section_Status p {
+    padding: 10px;
+    border-radius: 2px;
+    margin-left: 10px;
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.Detail {
+    background: #7C7E8A;
+    border-radius: 4px;
+    padding: 18px;
+}
+
+.Detail h1 {
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+
+.Today_Date p {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    /* identical to box height */
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(189, 189, 189, 0.85);
+    position: relative;
+}
+
+.Today_Date p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    height: 2px;
+    background-color: white;
+}

@@ -6,8 +6,7 @@
     display: flex;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: 300;
-    line-height: 37px;
+    font-weight: 400;
     text-align: center;
     letter-spacing: 3px;
     color: #C9CACC;
@@ -23,14 +22,24 @@
     height: 2px;
     background-color: #C9CACC;
 }
-
+/* 
 .List > div {
     width: 35%;
+} */
+
+.List_Amount {
+    width: 25%;
+}
+
+.Parent_Desc {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%
 }
 
 .List_Amount {
     padding-left: 70px;
-    overflow: hidden;
+    color: white;
 }
 
  .List_Amount h1{
@@ -41,7 +50,7 @@
 }
 
 .List_Date {
-    padding-right: 30px;
+    color: white;
 }
 
 .List_Date h1 {
@@ -50,8 +59,7 @@
 }
 
 .List_Description p {
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .Edit {
@@ -61,4 +69,113 @@
     padding: 10px;
     border-radius: 3px;
     margin-left: 100px;
+}
+
+
+@media (max-width: 1375px) {
+
+    .List_Date h1 {
+        font-size: 18px;
+    }
+
+    .List_Amount h1{
+        padding: 7px;
+    font-size: 22px;
+    }
+
+}
+
+@media (max-width: 1225px) {
+
+    .List {
+        width: 90%;
+    }
+
+    
+}
+
+@media (max-width: 1000px){
+    .List_Date {
+        font-size: 16px;
+    }
+    .Edit {
+        width: 80px !important;
+    }
+    .Edit img {
+        width: 25px;
+    }
+}
+
+@media (max-width: 880px) {
+    .Edit {
+        margin-left: 50px;
+    }
+    .List::before {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .Edit {
+        display: none;
+    }
+    .List {
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .List:hover .Edit{
+        display: block;
+    }
+
+    .Parent_Desc {
+        grid-template-columns: 1fr;
+        order: 1;
+        padding-left: 20px;
+    }
+
+    .List_Description {
+        order: 1;
+    }
+
+    .List_Date h1 {
+        text-align: left;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .List_Description p {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .List_Amount {
+        order: 1;
+    }
+    
+    .List_Amount h1 {
+        background-color: transparent !important;
+    }
+}
+
+@media (max-width: 635px) {
+    .List_Amount {
+        padding-left: 40px;
+    }
+
+    .Parent_Desc {
+        grid-gap: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .Edit {
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 425px) {
+    .List_Description {
+        font-size: 16px;
+    }
 }

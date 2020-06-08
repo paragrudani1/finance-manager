@@ -37,17 +37,7 @@ input {
 }
 
 .Input_Title h1 {
-    position: relative;
-}
-
-.Input_Title h1:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 2px;
-    background-color: white;
+    text-decoration: underline;
 }
 
 .Description {
@@ -116,3 +106,78 @@ input {
     background-color: aliceblue;
     color: black !important;
 } 
+
+
+@media (max-width: 1350px) {
+    .Input_Box {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 1150px) {
+    .Input_Box {
+        width: 55% !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Input_Box {
+        width: 70% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .Input_Box {
+        width:90% !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .General {
+        display: block;
+    }
+
+    .Amount {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .FormBtn button {
+        padding: 7px;
+    }
+
+    .Input_Title {
+        margin-bottom: 37px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .Description, .General {
+        width: 100%;
+    }
+
+    .Input_Title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .Input_Box {
+        padding: 40px 40px 20px 40px;
+        height: 345px !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .Input_Box {
+        padding: 30px 20px 30px 20px;
+        height: 330px !important;
+        width: 95% !important;
+    }
+
+    .Input_Title {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+}

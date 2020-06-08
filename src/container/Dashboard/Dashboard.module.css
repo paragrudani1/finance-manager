@@ -99,3 +99,188 @@ p.Green_Amount {
     height: 2px;
     background-color: white;
 }
+
+
+@media (max-width: 1550px) {
+    .Section_Status h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1420px) {
+    .Section_Status h1 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .Dashboard {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1150px ) {
+    .Income_Expanse_Container {
+        width: 55%;
+    }
+
+    .Detail h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .Dashboard {
+        height: 100px;
+    }
+        .Section_Status h1 {
+            font-size: 20px;
+        }
+
+        .Section_Status p {
+            font-size: 20px;
+        }
+
+        .Detail {
+            padding: 10px;
+        }
+
+        .Detail h1 {
+            font-size: 22px;
+        }
+
+        .Today_Date p {
+            font-size: 16px;
+        }
+ }
+
+ @media (max-width: 950px) {
+     .Dashboard {
+        padding: 0 50px 0 50px;
+     }
+ }
+
+ @media (max-width: 880px) {
+     .Dashboard {
+        padding: 0 20px 0 20px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .Dashboard {
+         padding: 0px 25px 0 25px;
+         height: 90px;
+         width: 92%;
+     }
+     .Section_Status h1, .Section_Status p, .Detail h1 {
+         font-size: 18px;
+     }
+
+     .Income_Expanse_Container {
+        width: 55%;
+        overflow: hidden;
+     }
+ }
+
+ @media (max-width: 730px) {
+     .Dashboard {
+         width: 95%;
+     }
+
+    .Section_Status h1{
+         font-size: 16px;
+     }
+
+     .Today_Date p{
+         font-size: 14px;
+     }
+ }
+
+ @media (max-width: 650px) {
+     .Dashboard {
+         flex-direction: column;
+         height: 100%;
+         align-items: baseline;
+         padding: 35px  0px 35px 0px;
+         width: 80%;
+     }
+
+     .Income_Expanse_Container {
+         display: grid;
+         margin: auto;
+     }
+
+     .Section_Status {
+         justify-content: unset;
+     }
+
+     .Section_Status h1 {
+         font-size: 30px;
+     }
+
+     .Section_Status:nth-child(2) {
+         margin-top: 20px ;
+     }
+
+     .Detail {
+        padding: 10px 50px 10px 50px;
+        margin: 30px auto;
+     }
+
+     .Detail h1 {
+         font-size: 25px;
+     }
+
+     .Today_Date {
+         margin: auto;
+     }
+
+     .Today_Date p {
+         font-size: 16px;
+     }
+ }
+
+ @media (max-width: 593px) {
+     .Section_Status h1 {
+         font-size: 25px;
+     }
+ }
+
+ @media (max-width: 513px) {
+     .Section_Status h1 {
+         font-size: 22px;
+     }
+ }
+
+ @media (max-width: 425px) {
+     .Section_Status h1 {
+         font-size: 18px;
+     }
+ }
+
+ @media (max-width: 375px) {
+     .Dashboard {
+         width: 90%;
+        padding: 30px  0px 30px 0px;
+     }
+     .Section_Status h1{
+         font-size: 18px;
+     }
+
+     .Detail h1 {
+         font-size: 20px;
+     }
+ }
+
+ @media (max-width: 320px) {
+     .Dashboard {
+         width: 100%;
+         border-radius: 0;
+         box-shadow: none;
+     }
+
+     .Income_Expanse_Container {
+         width: 60%;
+         margin: auto;
+     }
+ }

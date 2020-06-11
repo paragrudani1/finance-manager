@@ -25,19 +25,19 @@ class Dashbard extends Component {
                     {/* Total Expanse  */}
                     <div className={classes.Section_Status}>
                         <h1>Total Expanse - </h1>
-                        <p className={classes.Red_Amount}>${this.props.totalExpanse}</p>
+                        <p className={classes.Red_Amount}>₹{this.props.totalExpanse}</p>
                     </div>
 
                     {/* Total Income */}
                     <div className={classes.Section_Status}>
                         <h1>Total Income - </h1>
-                        <p className={classes.Green_Amount}>${this.props.totalIncome}</p>
+                        <p className={classes.Green_Amount}>₹{this.props.totalIncome}</p>
                     </div>
 
                 </div>
 
                 <div className={classes.Detail} onClick={this.props.addHandler}>
-                    <h1><Link to='/add'>Any Update?</Link></h1>
+                    <h1><Link to='/add'>Add</Link></h1>
                 </div>
 
                 <div className={classes.Today_Date}>

@@ -42,7 +42,7 @@
     color: white;
 }
 
- .List_Amount h1{
+ .List_Amount p{
     text-align: left;
     width: fit-content;
     padding: 10px;
@@ -62,13 +62,22 @@
     font-size: 20px;
 }
 
-.Edit {
-    background-color: #C9CACC;
-    width: 100px !important;
-    height: 50px;
-    padding: 10px;
-    border-radius: 3px;
-    margin-left: 100px;
+.List.remove {
+    overflow-x: hidden;
+    animation: removeListItem .3s ease-out forwards;
+}
+
+@keyframes removeListItem {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-10%);
+    }
+    100% {
+        overflow: hidden;
+        transform: translateX(100%);
+    }
 }
 
 
@@ -78,7 +87,7 @@
         font-size: 18px;
     }
 
-    .List_Amount h1{
+    .List_Amount p{
         padding: 7px;
     font-size: 22px;
     }
@@ -98,34 +107,19 @@
     .List_Date {
         font-size: 16px;
     }
-    .Edit {
-        width: 80px !important;
-    }
-    .Edit img {
-        width: 25px;
-    }
+
 }
 
 @media (max-width: 880px) {
-    .Edit {
-        margin-left: 50px;
-    }
     .List::before {
         left: 0;
     }
 }
 
 @media (max-width: 768px) {
-    .Edit {
-        display: none;
-    }
     .List {
         align-items: center;
         flex-direction: row-reverse;
-    }
-
-    .List:hover .Edit{
-        display: block;
     }
 
     .Parent_Desc {
@@ -151,31 +145,39 @@
 
     .List_Amount {
         order: 1;
+        padding-left: 0px;
     }
     
-    .List_Amount h1 {
-        background-color: transparent !important;
-    }
 }
 
 @media (max-width: 635px) {
-    .List_Amount {
-        padding-left: 40px;
-    }
+
 
     .Parent_Desc {
         grid-gap: 5px;
     }
 }
 
-@media (max-width: 500px) {
-    .Edit {
-        margin-left: 25px;
+@media (max-width: 425px) {
+    .List_Description p{
+        font-size: 16px;
+    }
+
+
+    .List_Date h1 {
+        font-size: 16px;
     }
 }
 
-@media (max-width: 425px) {
-    .List_Description {
-        font-size: 16px;
+@media (max-width: 320px) {
+    .Parent_Desc {
+        padding-left: 0px;
+    }
+    .List_Amount {
+        width: max-content;
+    }
+
+    .List_Amount p {
+        font-size: 18px;
     }
 }

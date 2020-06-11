@@ -4,7 +4,8 @@ const initialState = {
     status : localStorage.getItem('status') ? JSON.parse(localStorage.getItem('status')) : [],
     expanse: false,
     totalExpanse:  localStorage.getItem('totalExpanse') ? JSON.parse(localStorage.getItem('totalExpanse')) : 0,
-    totalIncome: localStorage.getItem('totalIncome') ? JSON.parse(localStorage.getItem('totalIncome')) : 0
+    totalIncome: localStorage.getItem('totalIncome') ? JSON.parse(localStorage.getItem('totalIncome')) : 0,
+    deleting: false
 }
 
 const storeExpanseDetail = (state, action) => {
@@ -13,6 +14,7 @@ const storeExpanseDetail = (state, action) => {
         ...state,
         status: state.status.concat({ description: action.description, amount: action.amount, expanse: true, bgColor: action.color,updateTime: new Date().toLocaleTimeString(), timeStamp: new Date().getTime()}),
         expanse: true,
+        deleting: false
     }
 }
 
@@ -23,6 +25,7 @@ const storeIncomeDetail = (state, action) => {
         ...state,
         status: state.status.concat({ description: action.description, amount: action.amount, income: true, bgColor: action.color, updateTime: new Date().toLocaleTimeString(), timeStamp: new Date().getTime()}),
         expanse: false,
+        deleting: false
     }
 }
 
@@ -101,7 +104,8 @@ const deleteData = (state, action) => {
 
     return {
         ...state,
-        status: state.status.filter(result => result.timeStamp !== action.dataIndex)
+        status: state.status.filter(result => result.timeStamp !== action.dataIndex),
+        deleting: true
     }
 }
 

@@ -27,14 +27,13 @@ class Edit extends Component {
         disabled: false
     }
 
-    
-    // updateValues = () => {
-    //     this.props.status.filter(e => {
-    //         if(e.timeStamp === +this.props.editId) {
-    //             e.amount = 10
-    //         }
-    //     })
-    // }
+
+    editState = () => {
+        this.props.hideEdit();
+
+        this.props.updateEdit(this.props.editId, this.state.description, this.state.amount)
+
+    }
     
     getValue = (e) => {
         const description = this.Description.current.value;
@@ -43,8 +42,16 @@ class Edit extends Component {
         description.length > 1 && amount.length > 1 ? this.setState({description: description, amount:amount, disabled: false}) : this.setState({disabled: true})
     }
 
+    deleteList = () => {
+        this.props.onDelete();
+        this.props.hideEdit();
+        setTimeout(() => {
+            this.props.onDeleteCancel()
+            this.props.updateDelete(this.props.editId)
+        }, 300)
+    }
     render() { 
-        return ( 
+        return (
             <>
             <Backdrop canceled={this.props.hideEdit} />
                 <div className={classes.Input_Box} >
@@ -63,8 +70,8 @@ class Edit extends Component {
                             </div>
                             
                             <div className={classes.FormBtn}>
-                                <button disabled={this.state.disabled} onClick={() => this.props.updateEdit(this.props.editId, this.state.description, this.state.amount)}  className={this.state.disabled ? classes.Disabled : classes.Update}>Update</button>
-                                <button disabled={this.state.disabled} onClick={() => this.props.updateDelete(this.props.editId)} className={this.state.disabled ? classes.Disabled : classes.Delete}>Delete</button>
+                                <button disabled={this.state.disabled} onClick={this.editState}  className={this.state.disabled ? classes.Disabled : classes.Update}>Update</button>
+                                <button disabled={this.state.disabled} onClick={this.deleteList } className={this.state.disabled ? classes.Disabled : classes.Delete}>Delete</button>
                             </div>
                         </div>
                     </form>

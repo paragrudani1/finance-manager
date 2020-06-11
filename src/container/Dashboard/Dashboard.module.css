@@ -19,7 +19,7 @@ a {
 
 .Income_Expanse_Container {
     display: flex;
-    width: 50%;
+    width: 55%;
     justify-content: space-between;
 }
 
@@ -101,6 +101,7 @@ p.Green_Amount {
 }
 
 
+
 @media (max-width: 1550px) {
     .Section_Status h1 {
         font-size: 25px;
@@ -160,6 +161,12 @@ p.Green_Amount {
      }
  }
 
+ @media (max-width: 800px) {
+     .Income_Expanse_Container {
+         width: 64%;
+     }
+ }
+
  @media (max-width: 880px) {
      .Dashboard {
         padding: 0 20px 0 20px;
@@ -174,10 +181,11 @@ p.Green_Amount {
      }
      .Section_Status h1, .Section_Status p, .Detail h1 {
          font-size: 18px;
+         width: max-content;
      }
 
      .Income_Expanse_Container {
-        width: 55%;
+        width: 67%;
         overflow: hidden;
      }
  }
@@ -280,7 +288,6 @@ p.Green_Amount {
      }
 
      .Income_Expanse_Container {
-         width: 60%;
          margin: auto;
      }
  }

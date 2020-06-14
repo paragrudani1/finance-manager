@@ -22,13 +22,13 @@ class List extends Component {
     }
 
      getData = (target) => {
-        this.setState({editState: !this.state.editState})
+        this.setState({editState: true})
         
         
         let id = target;
         this.props.status.filter(e => {
-            if(e.timeStamp === +id) {
-                this.setState({editId: e.timeStamp});
+            if(e.data.timeStamp === +id) {
+                this.setState({editId: e.data.timeStamp});
             }
             return true
         })
@@ -81,11 +81,6 @@ const mapStateToProps = state => {
 }
 
 
-const mapDispatchToProps = dispatch => {
-    return {
-        addHandler : () => dispatch(actions.addHandler()),
-        cancelHandler : () => dispatch(actions.cancelHandler()),
-    }
-}
+
  
-export default connect(mapStateToProps, mapDispatchToProps)(List);
+export default connect(mapStateToProps, null)(List);

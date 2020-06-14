@@ -1,6 +1,16 @@
 .Greeting p {
     color: #c9cacc;
     font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
+    /* text-align: center; */
+}
+
+.Greeting {
     margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.Greeting h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-weight: bold;
 }

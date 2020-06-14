@@ -4,8 +4,15 @@ export {
 } from './Dashboard';
 
 export {
-    updateTotalExpanse,
-    updateTotalIncome,
+    storeTotalExpanse,
+    storeTotalIncome,
     updateDataOnEdit,
-    updateDataOnDelete
+    updateDataOnDelete,
+    fetchData,
+    updateTotalAmount
 } from './InputContainer'
+
+export {
+    signUp,
+    Login
+} from './auth'

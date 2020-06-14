@@ -9,12 +9,14 @@ import {applyMiddleware, createStore, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk';
 import dashboardReducer from './store/reducer/Dashboard';
 import inputReducer from './store/reducer/InputContainer';
+import authReducer from './store/reducer/auth';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true, traceLimit: 25 }) || compose;
 
 const rootReducer = combineReducers({
     dashboard: dashboardReducer,
-    input: inputReducer
+    input: inputReducer,
+    auth: authReducer
 }) 
 
 const store = createStore( rootReducer,composeEnhancers(

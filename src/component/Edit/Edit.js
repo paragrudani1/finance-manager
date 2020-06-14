@@ -14,8 +14,8 @@ class Edit extends Component {
 
     componentDidMount() {
         this.props.status.filter(e => {
-            if(e.timeStamp === +this.props.editId) {
-                this.setState({description: e.description, amount: e.amount})
+            if(e.data.timeStamp === +this.props.editId) {
+                this.setState({description: e.data.description, amount: e.data.amount})
             }
             return true
         })
